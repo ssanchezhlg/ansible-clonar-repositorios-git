@@ -1,0 +1,5 @@
+---
+- name: Detener el servicio OpenVPN
+  shell: killall openvpn
+  ignore_errors: yes
+

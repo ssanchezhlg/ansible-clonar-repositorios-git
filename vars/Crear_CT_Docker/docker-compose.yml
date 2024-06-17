@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  openvpn-client-v3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "2222:22"    
+    volumes:
+      - ./client.ovpn:/etc/openvpn/client.ovpn:ro
+    restart: unless-stopped

@@ -1,0 +1,19 @@
+cuando existe ya el repo ejemplo en este caso en el oficial y yo inicializo el local cuando intento clonarlo da el error
+
+
+ 5:54:16 PM
+fatal: [10.10.10.110]: FAILED! => {"changed": true, "cmd": "git pull --rebase github_oficial main\n", "delta": "0:00:01.741044", "end": "2024-06-16 21:54:16.718396", "msg": "non-zero return code", "rc": 1, "start": "2024-06-16 21:54:14.977352", "stderr": "From https://github.com/ssanchezhlg/Automatizacion_instalaciones\n * branch            main       -> FETCH_HEAD\nRebasing (1/4)\rRebasing (2/4)\rerror: could not apply 7fcee93... subiendo todo el contenido\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm \", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config advice.mergeConflict false\"\nCould not apply 7fcee93... subiendo todo el contenido", "stderr_lines": ["From https://github.com/ssanchezhlg/Automatizacion_instalaciones", " * branch            main       -> FETCH_HEAD", "Rebasing (1/4)", "Rebasing (2/4)", "error: could not apply 7fcee93... subiendo todo el contenido", "hint: Resolve all conflicts manually, mark them as resolved with", "hint: \"git add/rm \", then run \"git rebase --continue\".", "hint: You can instead skip this commit: run \"git rebase --skip\".", "hint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".", "hint: Disable this message with \"git config advice.mergeConflict false\"", "Could not apply 7fcee93... subiendo todo el contenido"], "stdout": "Auto-merging Instalar_paquetes.yml\nCONFLICT (add/add): Merge conflict in Instalar_paquetes.yml", "stdout_lines": ["Auto-merging Instalar_paquetes.yml", "CONFLICT (add/add): Merge conflict in Instalar_paquetes.yml"]}
+
+
+
+otro error en el caso de que no exista la rama main en el repo da este error
+
+
+
+TASK [Hacer pull de los cambios del repositorio VPS] ***************************
+fatal: [10.10.10.110]: FAILED! => {"changed": true, "cmd": "git pull --rebase github_vps main\n", "delta": "0:00:00.736977", "end": "2024-06-16 21:57:14.795331", "msg": "non-zero return code", "rc": 1, "start": "2024-06-16 21:57:14.058354", "stderr": "fatal: couldn't find remote ref main", "stderr_lines": ["fatal: couldn't find remote ref main"], "stdout": "", "stdout_lines": []}
+
+
+
+El error fatal: couldn't find remote ref main ocurre porque el repositorio remoto al que intentas hacer git pull no tiene la rama main. Esto puede suceder 
+si el repositorio remoto está vacío o si la rama principal se llama de otra forma, como master en lugar de main.

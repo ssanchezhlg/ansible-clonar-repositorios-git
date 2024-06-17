@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  agent-sync-git_v1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: agent-sync-git_v1
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "2222:22"    
+    volumes:
+      - /home/DockerStore/Git_OpenVPN/volumenes/client.ovpn:/etc/openvpn/client.ovpn
+      - /home/DockerStore/Git_OpenVPN/volumenes/auth.txt:/etc/openvpn/auth.txt
+      - /home/DockerStore/Git_OpenVPN/volumenes/ClavePublicaSSH.txt:/root/.ssh/authorized_keys
+    restart: unless-stopped
