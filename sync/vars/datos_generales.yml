@@ -4,28 +4,28 @@ gitea_repo:
   token: "5b793c913648ae494169ea9956f29fbdf4755cec"
   user: "ssanchezhlg"
   host: "git.hlg.sld.cu"
-  repo: "Automatizacion_instalaciones.git"
+  repo: "ansible-clonar-repositorios-git"
 
 github_vps_repo:
   use_repo: true
   token: "35a36576a7b1fa94c781a2dc50c8334db87196a7"
   user: "ssanchezhlg"
   host: "git.softnet.cu"
-  repo: "Automatizacion_instalaciones.git"
+  repo: "ansible-clonar-repositorios-git"
 
 github_oficial_repo:
   use_repo: true
   token: "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"
   user: "ssanchezhlg"
   host: "github.com"
-  repo: "Automatizacion_instalaciones.git"
+  repo: "ansible-clonar-repositorios-git"
 
 github_InfomedHLG_repo:
   use_repo: true
   token: "dacb2230c74cc6d58d8fd9580f5003d1281b1f7f"
-  user: "ssanchezhlg"
+  user: "Nodo_Provincial"
   host: "github.hlg.sld.cu"
-  repo: "Automatizacion_instalaciones.git"
+  repo: "ansible-clonar-repositorios-git"
 
 openvpn_profile:
   use_openvpn: true
