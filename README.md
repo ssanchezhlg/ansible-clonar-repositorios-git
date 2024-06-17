@@ -39,20 +39,6 @@ gitea_repo:
   host: "github.hlg.sld.cu"
   repo: "testin_clonado.git"
 
-github_vps_repo:
-  use_repo: true
-  token: "35a36576a7b1fa94c781a2dc50c8334db87196a7"
-  user: "ssanchezhlg"
-  host: "git.softnet.cu"
-  repo: "testin_clonado.git"
-
-github_oficial_repo:
-  use_repo: true
-  token: "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"
-  user: "ssanchezhlg"
-  host: "github.com"
-  repo: "testin_clonado.git"
-
 proxy:
   use_proxy: true
   host: "10.10.10.217"
@@ -108,5 +94,8 @@ El playbook realiza las siguientes tareas:
 
 7. **Eliminar la Carpeta Temporal**:
    Elimina la carpeta temporal `/tmp/repo`.
+
+
+en el repositori al crearlo marcarle la opcion readme
 
 ## Para usarlo con Semaphore
